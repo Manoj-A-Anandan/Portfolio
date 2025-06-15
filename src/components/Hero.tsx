@@ -160,8 +160,7 @@ const Hero: React.FC = () => {
               <span>View My Work</span>
             </motion.a>
             <motion.a
-              //href="https://drive.google.com/file/d/1bUqh85dgGGgYBaTRYFL-QzGwT8Mu4_DF/view?usp=sharing"
-              href="src\docs\Manoj Resume.pdf"
+              href="\Manoj Resume.pdf"
               download
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

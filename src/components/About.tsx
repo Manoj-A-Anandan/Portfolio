@@ -56,7 +56,7 @@ const About: React.FC = () => {
               <div className="w-80 h-80 mx-auto rounded-3xl bg-gradient-to-br from-emerald-400 via-blue-500 to-purple-600 p-1">
                 <div className="w-full h-full bg-gray-200 dark:bg-gray-700 rounded-3xl flex items-center justify-center overflow-hidden">
                 <img 
-                  src="src/docs/about.jpg" 
+                  src="/about.jpg" 
                   alt="Manoj A"
                   className="w-full h-full object-cover object-top rounded-3xl"
                 />
