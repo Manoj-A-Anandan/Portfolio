@@ -11,7 +11,7 @@ const Experience: React.FC = () => {
           title: 'AI Engineering Intern & QA',
           company: 'DataReveal AI',
           location: 'Coimbatore, India',
-          period: 'Mar 2025 – Present',
+          period: 'Mar 2025 – Jul 2025',
           type: 'Internship',
           description: 'Contributing to an HRMS project by supporting AI model integration and ensuring software quality through systematic QA testing. Balancing machine learning experimentation with automated testing in an agile setup.',
           achievements: [
@@ -20,7 +20,7 @@ const Experience: React.FC = () => {
             'Built QA test plans using Selenium and JMeter for end-to-end scenarios',
             'Improved bug reporting efficiency by 40% using collaborative DevOps tools'
           ],
-          technologies: ['Python', 'Selenium', 'JMeter', 'Scikit-learn', 'Docker', 'Git'],
+          technologies: ['Python', 'Selenium', 'JMeter', 'Scikit-learn', 'Docker', 'Git', 'GitHub','VS Code', 'Postman', 'Agile'],
           metrics: [
             { icon: Award, value: '2+', label: 'Modules QA Tested' },
             { icon: TrendingUp, value: '40%', label: 'QA Efficiency Gain' }

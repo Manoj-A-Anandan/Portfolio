@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
               Manoj A
             </motion.div>
             <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
-              AI Engineering Intern passionate about building intelligent applications,  
+              AI Engineering passionate about building intelligent applications,  
               enhancing software quality, and collaborating with teams to deliver impactful solutions.
             </p>
           </div>
