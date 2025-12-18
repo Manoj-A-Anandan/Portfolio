@@ -4,17 +4,11 @@ import { Github, Linkedin, Mail, Download } from 'lucide-react';
 
 const Hero: React.FC = () => {
   const roles = [
-    "Learning AI 🧠",
-    "Squashing Bugs 🐛",
-    "Building Web Apps 💻",
-    "AI Intern 🤖",
-    "QA Tester 🧪",
-    "ML Enthusiast 💡",
-    "Future AI Engineer 🚀",
-    "QA Specialist 🧪",
-    "Team Player 🤝",
-    "Python Dev 👨‍💻",
-    "AI Builder 🤖"
+    "Software Engineer",
+    "Python Developer",
+    "AI Enthusiast",
+    "FreeLancer",
+    "Problem Solver"
   ];
 
   const [index, setIndex] = useState(0);
@@ -47,7 +41,8 @@ const Hero: React.FC = () => {
   const socialLinks = [
     { icon: Github, href: 'https://github.com/Manoj-A-Anandan', label: 'GitHub' },
     { icon: Linkedin, href: 'https://www.linkedin.com/in/manoj-a-2777b0258/', label: 'LinkedIn' },
-    { icon: Mail, href: '#contact', label: 'Email' },
+    { icon: Mail, href: 'mailto:manoj55802@gmail.com', label: 'Email' },
+    // You might want to add Leetcode here too if desired, but 3 items look good.
   ];
 
   return (
@@ -119,7 +114,7 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
           >
-            AI enthusiast and emerging full-stack developer passionate about building smart systems  
+            AI enthusiast and emerging full-stack developer passionate about building smart systems
             and delivering reliable software. Skilled in Python, ML, testing, and modern web technologies.
           </motion.p>
 

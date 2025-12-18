@@ -18,40 +18,52 @@ const Skills = () => {
 
   const skillCategories = [
     {
-      title: 'AI & Machine Learning',
-      icon: Brain,
-      color: 'from-blue-500 to-cyan-500',
-      skills: ['Python', 'Scikit-learn', 'TensorFlow', 'OpenCV', 'AutoML', 'Pandas', 'Numpy']
-    },
-    {
-      title: 'Web & App Development',
+      title: 'Languages',
       icon: Code2,
+      color: 'from-blue-500 to-cyan-500',
+      skills: ['Python', 'Java', 'JavaScript', 'SQL']
+    },
+    {
+      title: 'Frameworks & Libraries',
+      icon: Brain,
       color: 'from-emerald-500 to-teal-500',
-      skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Streamlit', 'Django']
+      skills: ['Flask', 'Scikit-learn', 'NumPy', 'Pandas', 'Matplotlib']
     },
     {
-      title: 'DevOps & Deployment',
-      icon: Cloud,
+      title: 'Software Development',
+      icon: Lightbulb,
       color: 'from-purple-500 to-indigo-500',
-      skills: ['Docker', 'GitHub', 'Jenkins', 'CI/CD', 'Google Colab']
+      skills: ['OOP', 'Data Structures', 'REST APIs', 'SDLC']
     },
     {
-      title: 'Testing & QA',
-      icon: Bug,
-      color: 'from-pink-500 to-rose-500',
-      skills: ['Selenium', 'JMeter', 'Postman', 'Bug Reporting', 'Test Planning']
-    },
-    {
-      title: 'Data & Analytics',
-      icon: Database,
-      color: 'from-orange-500 to-yellow-500',
-      skills: ['MySQL', 'Google Drive', 'Tableau', 'Power BI']
-    },
-    {
-      title: 'Tools & Workflow',
+      title: 'Tools',
       icon: GitBranch,
+      color: 'from-pink-500 to-rose-500',
+      skills: ['Git', 'GitHub', 'Docker', 'Jupyter', 'Postman', 'Selenium', 'Tableau']
+    },
+    {
+      title: 'Testing',
+      icon: Bug,
+      color: 'from-orange-500 to-yellow-500',
+      skills: ['Pytest', 'Unit Testing', 'Debugging', 'Code Reviews']
+    },
+    {
+      title: 'Databases',
+      icon: Database,
       color: 'from-violet-500 to-purple-500',
-      skills: ['VS Code', 'Git', 'GitHub', 'Agile Methodologies']
+      skills: ['MySQL', 'PostgreSQL']
+    },
+    {
+      title: 'Platforms',
+      icon: Cloud,
+      color: 'from-cyan-500 to-blue-500',
+      skills: ['Google Colab', 'Streamlit']
+    },
+    {
+      title: 'Methodologies',
+      icon: Star,
+      color: 'from-red-500 to-pink-500',
+      skills: ['Agile', 'Scrum', 'Version Control', 'CI/CD']
     }
   ];
 

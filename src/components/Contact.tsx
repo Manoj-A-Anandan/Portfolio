@@ -1,9 +1,11 @@
 import React, { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Send, Mail, Phone, MapPin, Github, Linkedin, MessageCircle, Instagram, CodeIcon } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const Contact: React.FC = () => {
   const ref = useRef(null);
+  const formRef = useRef<HTMLFormElement>(null);
   const isInView = useInView(ref, { once: true });
   const [formData, setFormData] = useState({
     name: '',
@@ -21,16 +23,25 @@ const Contact: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    // Reset form
-    setFormData({ name: '', email: '', subject: '', message: '' });
-    setIsSubmitting(false);
-    
-    // Show success message (you can replace with actual form handling)
-    alert('Message sent successfully! I\'ll get back to you soon.');
+
+    if (!formRef.current) return;
+
+    try {
+      await emailjs.sendForm(
+        'service_uchuaed',
+        'template_wyv2rs9',
+        formRef.current,
+        'Xyo9vInw-uFUenoBe'
+      );
+
+      alert('Message sent successfully! I\'ll get back to you soon.');
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    } catch (error) {
+      console.error('FAILED...', error);
+      alert('Failed to send message. Please try again or email me directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -67,8 +78,8 @@ const Contact: React.FC = () => {
   const socialLinks = [
     { icon: Github, href: 'https://github.com/Manoj-A-Anandan', label: 'GitHub', color: 'hover:text-gray-900 dark:hover:text-white' },
     { icon: Linkedin, href: 'https://www.linkedin.com/in/manoj-a-2777b0258/', label: 'LinkedIn', color: 'hover:text-blue-600' },
-    { icon:CodeIcon , href: 'https://leetcode.com/u/manoj55802/', label: 'Leetcode', color: 'hover:text-blue-400' },
-    { icon: Instagram, href: 'https://www.instagram.com/_manzzzz._._/', label: 'Instagram', color: 'hover:text-blue-400' },
+    { icon: CodeIcon, href: 'https://leetcode.com/u/manoj55802/', label: 'Leetcode', color: 'hover:text-yellow-500' },
+    { icon: Instagram, href: 'https://www.instagram.com/_manzzzz._._/', label: 'Instagram', color: 'hover:text-pink-500' },
   ];
 
   return (
@@ -85,7 +96,7 @@ const Contact: React.FC = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-emerald-600 to-blue-600 mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Have an exciting project in mind or want to discuss opportunities? 
+            Have an exciting project in mind or want to discuss opportunities?
             I'm always interested in collaborating on innovative solutions.
           </p>
         </motion.div>
@@ -103,7 +114,7 @@ const Contact: React.FC = () => {
                 Get In Touch
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-                I'm currently open to new opportunities and interesting projects. 
+                I'm currently open to new opportunities and interesting projects.
                 Whether you have a question or just want to say hi, feel free to reach out!
               </p>
             </div>
@@ -175,7 +186,7 @@ const Contact: React.FC = () => {
               </p>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="relative">
                   <input

@@ -1,69 +1,30 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { Calendar, MapPin, Users, TrendingUp, Award, Code } from 'lucide-react';
+import { Calendar, MapPin, TrendingUp, Award } from 'lucide-react';
 
 const Experience: React.FC = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
   const experiences = [
-          {
-          title: 'AI Engineering Intern & QA',
-          company: 'DataReveal AI',
-          location: 'Coimbatore, India',
-          period: 'Mar 2025 – Jul 2025',
-          type: 'Internship',
-          description: 'Contributing to an HRMS project by supporting AI model integration and ensuring software quality through systematic QA testing. Balancing machine learning experimentation with automated testing in an agile setup.',
-          achievements: [
-            'Performed test case design and execution for key HR modules',
-            'Contributed to model deployment and integration with backend systems',
-            'Built QA test plans using Selenium and JMeter for end-to-end scenarios',
-            'Improved bug reporting efficiency by 40% using collaborative DevOps tools'
-          ],
-          technologies: ['Python', 'Selenium', 'JMeter', 'Scikit-learn', 'Docker', 'Git', 'GitHub','VS Code', 'Postman', 'Agile'],
-          metrics: [
-            { icon: Award, value: '2+', label: 'Modules QA Tested' },
-            { icon: TrendingUp, value: '40%', label: 'QA Efficiency Gain' }
-          ]
-        },
-        {
-          title: 'Junior Web Developer Intern',
-          company: 'Altalya Solutions Pvt Ltd',
-          location: 'Tiruppur, India',
-          period: 'Jun 2024 – Jul 2024',
-          type: 'Internship',
-          description: 'Worked on developing responsive user interfaces and feature integrations for client-facing web applications. Collaborated with designers and senior developers in an agile team environment.',
-          achievements: [
-            'Built and deployed a responsive website using HTML, CSS, and JS',
-            'Gained hands-on experience with real client UI requirements',
-            'Delivered components under mentorship of lead developer',
-            'Took initiative in team demo presentations and documentation'
-          ],
-          technologies: ['HTML', 'CSS', 'JavaScript', 'Bootstrap', 'VS Code'],
-          metrics: [
-            { icon: Award, value: '1', label: 'Live Website Deployed' },
-            { icon: TrendingUp, value: '100%', label: 'Internship Completion' }
-          ]
-        },
-        {
-          title: 'Academic Project Contributor',
-          company: 'Self-Driven',
-          location: 'Remote',
-          period: '2023 – 2025',
-          type: 'Self Project',
-          description: 'Developed and deployed machine learning models and AI-powered apps as personal projects. Focused on model accuracy, deployment, and practical usage of AI in real-world scenarios.',
-          achievements: [
-            'Built face recognition app using OpenCV & HOG algorithm',
-            'Created customer churn prediction dashboard in Streamlit',
-            'Developed AutoML credit fraud detection using H2O.ai',
-            'Published all projects on GitHub with full documentation'
-          ],
-          technologies: ['Python', 'Scikit-learn', 'OpenCV', 'H2O.ai', 'Streamlit', 'Colab'],
-          metrics: [
-            { icon: Code, value: '3+', label: 'ML Projects Delivered' },
-            { icon: Users, value: 'Public', label: 'Open Source' }
-          ]
-        }
+    {
+      title: 'Software Tester Intern',
+      company: 'DataRevealAI',
+      location: 'Coimbatore',
+      period: 'Mar 2025 – Jul 2025',
+      type: 'Internship',
+      description: 'Worked on debugging, testing, and improving the HRMS platform through automated scripts and rigorous testing strategies.',
+      achievements: [
+        'Developed manual and automated test scripts using Selenium and Python (Pytest) to debug the HRMS platform, improving test coverage and collaborating directly with developers on code-level fixes.',
+        'Formulated and executed rigorous test strategies that identified critical bugs, directly contributing to a 15% reduction in defect detection time.',
+        'Participated in code reviews and debugging sessions, helping to maintain code quality and adherence to Agile sprint goals.'
+      ],
+      technologies: ['Python', 'Selenium', 'Pytest', 'BS4', 'Agile'],
+      metrics: [
+        { icon: Award, value: '15%', label: 'Defect Reduction' },
+        { icon: TrendingUp, value: 'Agile', label: 'Collaboration' }
+      ]
+    }
   ];
 
   return (
@@ -80,8 +41,8 @@ const Experience: React.FC = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-emerald-600 to-blue-600 mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Actively growing in the field of AI and software development through hands-on projects, 
-            internships, and real-world QA experience. Passionate about delivering intelligent solutions 
+            Actively growing in the field of AI and software development through hands-on projects,
+            internships, and real-world QA experience. Passionate about delivering intelligent solutions
             and mastering full-stack skills.
           </p>
         </motion.div>

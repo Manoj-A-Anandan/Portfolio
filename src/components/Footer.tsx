@@ -12,6 +12,7 @@ const Footer: React.FC = () => {
     { href: '#skills', label: 'Skills' },
     { href: '#projects', label: 'Projects' },
     { href: '#experience', label: 'Experience' },
+    { href: '#education', label: 'Education' },
     { href: '#contact', label: 'Contact' },
   ];
 
@@ -28,7 +29,7 @@ const Footer: React.FC = () => {
               Manoj A
             </motion.div>
             <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
-              AI Engineering passionate about building intelligent applications,  
+              AI Engineering passionate about building intelligent applications,
               enhancing software quality, and collaborating with teams to deliver impactful solutions.
             </p>
           </div>
@@ -74,7 +75,7 @@ const Footer: React.FC = () => {
 
         {/* Bottom Section */}
         <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-            <div className="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-300">
+          <div className="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-300">
             <span>Code. Coffee.</span>
             <Heart size={16} className="text-red-500 fill-current animate-pulse" />
             <span>Repeat. — © 2025 Manoj</span>

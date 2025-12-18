@@ -9,26 +9,26 @@ const About: React.FC = () => {
   const isInView = useInView(ref, { once: true });
 
   const highlights = [
-            {
-              icon: Code,
-              title: 'AI & Full-Stack Skills',
-              description: 'Built intelligent systems using Python, ML, and modern web technologies'
-            },
-            {
-              icon: Users,
-              title: 'Team Collaboration',
-              description: 'Worked closely with developers and testers in agile environments'
-            },
-            {
-              icon: Lightbulb,
-              title: 'Innovation & Projects',
-              description: 'Developed ML apps like Face Recognition and Fraud Detection using AutoML'
-            },
-            {
-              icon: Award,
-              title: 'Early Achiever',
-              description: 'Led an SIH team, delivered impactful internships, solved 400+ DSA problems'
-            }
+    {
+      icon: Code,
+      title: 'AI & Full-Stack Skills',
+      description: 'Built intelligent systems using Python, ML, and modern web technologies'
+    },
+    {
+      icon: Users,
+      title: 'Team Collaboration',
+      description: 'Worked closely with developers and testers in agile environments'
+    },
+    {
+      icon: Lightbulb,
+      title: 'Innovation & Projects',
+      description: 'Developed ML apps like Face Recognition and Fraud Detection using AutoML'
+    },
+    {
+      icon: Award,
+      title: 'Early Achiever',
+      description: 'Led an SIH team, delivered impactful internships, solved 400+ DSA problems'
+    }
   ];
 
   return (
@@ -55,12 +55,12 @@ const About: React.FC = () => {
             <div className="relative">
               <div className="w-80 h-80 mx-auto rounded-3xl bg-gradient-to-br from-emerald-400 via-blue-500 to-purple-600 p-1">
                 <div className="w-full h-full bg-gray-200 dark:bg-gray-700 rounded-3xl flex items-center justify-center overflow-hidden">
-                <img 
-                  src="/about.jpg" 
-                  alt="Manoj A"
-                  className="w-full h-full object-cover object-top rounded-3xl"
-                />
-              </div>
+                  <img
+                    src="/about.jpg"
+                    alt="Manoj A"
+                    className="w-full h-full object-cover object-top rounded-3xl"
+                  />
+                </div>
 
               </div>
               <motion.div
@@ -80,19 +80,17 @@ const About: React.FC = () => {
             className="space-y-6"
           >
             <h3 className="text-3xl font-bold text-gray-900 dark:text-white">
-              AI Engineering Intern & QA Specialist
+              Software Engineer
             </h3>
             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-              With hands-on experience in artificial intelligence, software testing, and full-stack development, 
-              I specialize in building intelligent systems and ensuring high product quality. My expertise spans 
-              machine learning model deployment, automation testing, and agile collaboration.
+              Software Engineer with hands-on experience in developing, testing, and deploying scalable software solutions using
+              Python and Java. Strong in problem-solving, debugging, and collaborating in agile teams.
             </p>
             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-              I'm passionate about solving real-world problems through AI, continuously learning new technologies, 
-              and contributing to impactful projects. Currently interning at DataReveal AI, where I support both 
-              model development and QA processes for an enterprise HRMS platform.
+              Passionate about applying innovative technologies to drive automation, performance, and business impact.
+              Experienced in working across SDLC phases and maintaining code quality through reviews and version control.
             </p>
-            
+
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
               {highlights.map((highlight, index) => (
                 <motion.div

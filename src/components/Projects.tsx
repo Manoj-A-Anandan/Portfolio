@@ -7,43 +7,43 @@ const Projects: React.FC = () => {
   const isInView = useInView(ref, { once: true });
 
   const projects = [
-          {
-          title: 'Face Recognition System',
-          description: 'Facial recognition and matching app using OpenCV with HOG optimization. Cloud-based deployment with adjustable thresholds.',
-          image: 'https://images.pexels.com/photos/6143367/pexels-photo-6143367.jpeg?auto=compress&cs=tinysrgb&w=500',
-          technologies: ['Python', 'OpenCV', 'face_recognition', 'Google Colab'],
-          github: 'https://github.com/Manoj-A-Anandan/Face_recognition_model',
-          live: '',
-          metrics: [
-            { icon: TrendingUp, value: '90%', label: 'Accuracy' },
-            { icon: Users, value: 'Multi-user', label: 'Face Matching' }
-          ],
-          featured: true
-        },
-        {
-          title: 'Customer Churn Prediction',
-          description: 'ML-powered web app to predict customer churn in the telecom sector using RandomForest. Deployed with Streamlit.',
-          image: 'https://images.pexels.com/photos/8296976/pexels-photo-8296976.jpeg?auto=compress&cs=tinysrgb&w=500',
-          technologies: ['Python', 'Scikit-learn', 'Streamlit'],
-          github: 'https://github.com/Manoj-A-Anandan/Customer_churn_prediction',
-          live: '',
-          metrics: [
-            { icon: TrendingUp, value: '85%', label: 'Model Accuracy' },
-            { icon: Users, value: 'Real-time', label: 'Web Interface' }
-          ]
-        },
-        {
-          title: 'AutoML Fraud Detection',
-          description: 'Credit card fraud detection system using H2O.ai AutoML. Dockerized for scalable and fast deployment.',
-          image: 'https://images.pexels.com/photos/6693651/pexels-photo-6693651.jpeg?auto=compress&cs=tinysrgb&w=500',
-          technologies: ['Python', 'H2O.ai', 'Docker', 'Scikit-learn'],
-          github: 'https://github.com/Manoj-A-Anandan/Credit-card-Fraud-detection-using-H2O-framework-AutoML-',
-          live: '',
-          metrics: [
-            { icon: TrendingUp, value: '92%', label: 'Detection Rate' },
-            { icon: Star, value: 'AutoML', label: 'Framework' }
-          ]
-        }
+    {
+      title: 'Real-Time System Monitoring Dashboard',
+      description: 'Streamlined system metrics pipeline using Kafka and PostgreSQL with ML anomaly detection.',
+      image: 'https://images.pexels.com/photos/17483873/pexels-photo-17483873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', // Placeholder or keep existing if suitable
+      technologies: ['Kafka', 'Streamlit', 'Docker', 'PostgreSQL', 'ML'],
+      github: '#', // Link from image is just 'Link', assuming placeholder
+      live: '',
+      metrics: [
+        { icon: TrendingUp, value: '25%', label: 'Lag Reduction' },
+        { icon: Users, value: '90%', label: 'Anomaly Accuracy' }
+      ],
+      featured: true
+    },
+    {
+      title: 'Face Recognition and Matching System',
+      description: 'High-precision face retrieval system using InsightFace and FastAPI with improved latency.',
+      image: 'https://images.pexels.com/photos/6143367/pexels-photo-6143367.jpeg?auto=compress&cs=tinysrgb&w=500',
+      technologies: ['InsightFace', 'FastAPI', 'Docker', 'Supabase'],
+      github: '#',
+      live: '',
+      metrics: [
+        { icon: TrendingUp, value: '80%', label: 'Latency Reduction' },
+        { icon: Users, value: '500+', label: 'Images Scaled' }
+      ]
+    },
+    {
+      title: 'AutoML Credit Card Fraud Detection',
+      description: 'AutoML-based fraud detection system using H2O.ai and Scikit-learn.',
+      image: 'https://images.pexels.com/photos/6693651/pexels-photo-6693651.jpeg?auto=compress&cs=tinysrgb&w=500',
+      technologies: ['H2O.ai', 'Scikit-learn', 'AutoML'],
+      github: '#',
+      live: '',
+      metrics: [
+        { icon: TrendingUp, value: '90%', label: 'Detection Rate' },
+        { icon: Star, value: '30%', label: 'Less False Positives' }
+      ]
+    }
   ];
 
   return (
@@ -60,7 +60,7 @@ const Projects: React.FC = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-emerald-600 to-blue-600 mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            A collection of projects I’ve built to explore real-world applications of AI, machine learning, 
+            A collection of projects I’ve built to explore real-world applications of AI, machine learning,
             and web technologies — from facial recognition systems to fraud detection tools.
           </p>
         </motion.div>
@@ -72,9 +72,8 @@ const Projects: React.FC = () => {
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
-                index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
-              }`}
+              className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
+                }`}
             >
               <div className={`${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
                 <motion.div
@@ -120,7 +119,7 @@ const Projects: React.FC = () => {
                   )}
                 </motion.div>
               </div>
-              
+
               <div className={`space-y-6 ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
                 <div>
                   <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
