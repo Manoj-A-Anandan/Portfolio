@@ -10,10 +10,9 @@ const Projects: React.FC = () => {
     {
       title: 'Real-Time System Monitoring Dashboard',
       description: 'Streamlined system metrics pipeline using Kafka and PostgreSQL with ML anomaly detection.',
-      image: 'https://images.pexels.com/photos/17483873/pexels-photo-17483873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', // Placeholder or keep existing if suitable
+      image: '/SMD.png',
       technologies: ['Kafka', 'Streamlit', 'Docker', 'PostgreSQL', 'ML'],
-      github: '#', // Link from image is just 'Link', assuming placeholder
-      live: '',
+      github: 'https://github.com/Manoj-A-Anandan/System-Monitoring-Dashboard/',
       metrics: [
         { icon: TrendingUp, value: '25%', label: 'Lag Reduction' },
         { icon: Users, value: '90%', label: 'Anomaly Accuracy' }
@@ -23,10 +22,10 @@ const Projects: React.FC = () => {
     {
       title: 'Face Recognition and Matching System',
       description: 'High-precision face retrieval system using InsightFace and FastAPI with improved latency.',
-      image: 'https://images.pexels.com/photos/6143367/pexels-photo-6143367.jpeg?auto=compress&cs=tinysrgb&w=500',
+      image: '/FRS.png',
       technologies: ['InsightFace', 'FastAPI', 'Docker', 'Supabase'],
-      github: '#',
-      live: '',
+      github: 'https://github.com/Manoj-A-Anandan/Face_recognition_model',
+      live: 'https://huggingface.co/spaces/ManojRabbit/Face-Recognition',
       metrics: [
         { icon: TrendingUp, value: '80%', label: 'Latency Reduction' },
         { icon: Users, value: '500+', label: 'Images Scaled' }
@@ -37,8 +36,7 @@ const Projects: React.FC = () => {
       description: 'AutoML-based fraud detection system using H2O.ai and Scikit-learn.',
       image: 'https://images.pexels.com/photos/6693651/pexels-photo-6693651.jpeg?auto=compress&cs=tinysrgb&w=500',
       technologies: ['H2O.ai', 'Scikit-learn', 'AutoML'],
-      github: '#',
-      live: '',
+      github: 'https://github.com/Manoj-A-Anandan/Credit-card-Fraud-detection-using-H2O-framework-AutoML-',
       metrics: [
         { icon: TrendingUp, value: '90%', label: 'Detection Rate' },
         { icon: Star, value: '30%', label: 'Less False Positives' }
@@ -98,16 +96,18 @@ const Projects: React.FC = () => {
                       >
                         <Github size={20} />
                       </motion.a>
-                      <motion.a
-                        href={project.live}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
-                        className="p-3 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/30 transition-colors"
-                      >
-                        <ExternalLink size={20} />
-                      </motion.a>
+                      {project.live && (
+                        <motion.a
+                          href={project.live}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          whileHover={{ scale: 1.1 }}
+                          whileTap={{ scale: 0.9 }}
+                          className="p-3 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/30 transition-colors"
+                        >
+                          <ExternalLink size={20} />
+                        </motion.a>
+                      )}
                     </div>
                   </div>
                   {project.featured && (
@@ -161,17 +161,19 @@ const Projects: React.FC = () => {
                 </div>
 
                 <div className="flex space-x-4">
-                  <motion.a
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="px-6 py-3 bg-gradient-to-r from-emerald-600 to-blue-600 text-white rounded-2xl font-semibold shadow-lg hover:shadow-xl transition-shadow duration-300 flex items-center space-x-2"
-                  >
-                    <ExternalLink size={18} />
-                    <span>Live Demo</span>
-                  </motion.a>
+                  {project.live && (
+                    <motion.a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="px-6 py-3 bg-gradient-to-r from-emerald-600 to-blue-600 text-white rounded-2xl font-semibold shadow-lg hover:shadow-xl transition-shadow duration-300 flex items-center space-x-2"
+                    >
+                      <ExternalLink size={18} />
+                      <span>Live Demo</span>
+                    </motion.a>
+                  )}
                   <motion.a
                     href={project.github}
                     target="_blank"
